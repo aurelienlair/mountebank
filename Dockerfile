@@ -23,4 +23,4 @@ RUN set -ex; \
 COPY . /usr/src/app
 
 # The command that runs when the container starts
-CMD [ "mb", "--configure imposter.js --loglevel debug --debug --nologfile" ]
+CMD mb start --configfile imposters.ejs --loglevel debug --debug --nologfile

@@ -2,17 +2,20 @@
   "predicates": [
     {
       "equals": {
-        "method": "POST",
-        "path": "/test"
+        "method": "GET",
+        "path": "/ping"
       }
     }
   ],
   "responses": [
     {
       "is": {
-        "statusCode": 200
-      },
-      "body": {}
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {"value":"pong"}
+      }
     }
   ]
 }
